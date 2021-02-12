@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <div class="page-content container">
+        <div id="error-panel">
+          <h3 id="error-type">Error Type</h3>
+          <p id="error-message">Error message</p>
+          <button id="hide-error-btn" type="button">Close</button>
+        </div>
+
+        <shutdown-dialog id="shutdown-dialog"></shutdown-dialog>
+
+        <remote-screen
+          id="remote-screen"
+          milliseconds-between-mouse-events="600"
+        ></remote-screen>
+
+        <div id="keystroke-panel" class="container">
+          <key-history></key-history>
+          <div>
+            <on-screen-keyboard id="on-screen-keyboard"></on-screen-keyboard>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div id="keystroke-panel" class="container">
+      <key-history></key-history>
+      <div>
+        <on-screen-keyboard id="on-screen-keyboard"></on-screen-keyboard>
+      </div>
+    </div>
+{% endblock content %}      
+      
+    

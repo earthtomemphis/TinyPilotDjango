@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>TinyPilot</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+    <div id="app" tabindex="0">
+        <div class="navbar">
+        <div class="brand"><img src="{% static 'img/slim-logo-white.png' %}" /></div>
+        <ul class="nav-items">
+            <li class="dropdown">
+            <a>Commands</a>
+            <ul>
+                <li>
+                <a id="paste-btn">Paste</a>
+                </li>
+                <li>
+                <a>Cursor<span class="caret"></span></a>
+                <ul id="cursor-list">
+                    <!-- JavaScript populates this list dynamically. -->
+                </ul>
+                </li>
+                <li>
+                <a id="screenshot-btn" href="/snapshot">Screenshot</a>
+                </li>
+                <li>
+                <a id="fullscreen-btn">Full Screen</a>
+                </li>
+            </ul>
+            </li>
+        
+            <li class="connection-indicator">
+            <connection-indicator id="connection-indicator"></connection-indicator>
+            </li>
+        
+            <li class="nav-icon source-link">
+            <a href="https://github.com/mtlynch/tinypilot">
+                <img src="{% static 'img/GitHub-Mark-Light-120px-plus.png' %}" />
+            </a>
+            </li>
+            <li class="nav-icon power">
+            <a id="power-btn" href="#">
+                <img src="{% static 'img/power-icon.png' %}" />
+            </a>
+            </li>
+        </ul>
+        </div>
+        {% block content %}
+            
+        {% endblock content %}
+        <script src="{% static 'third-party/socket.io/2.3.0/socket.io.js' %}"></script>
+        <script src="{% static 'js/paste.js' %}"></script>
+        <script type="module" src="{% static 's/app.js' %}j"></script>
+    </body>
+    </html>

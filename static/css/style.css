@@ -1,0 +1,59 @@
+@import "button.css";
+@import "cursors.css";
+@import "keyboard-panel.css";
+@import "navbar.css";
+
+body {
+  margin: 0;
+  background: rgb(114, 114, 114);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+* {
+  font-family: Lora;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand {
+  font-family: Nunito;
+}
+
+a {
+  color: rgb(192, 255, 110);
+  text-decoration: none;
+}
+
+img {
+  object-fit: contain;
+}
+
+.question-icon {
+  max-width: 20px;
+}
+
+#error-panel {
+  display: none;
+  background-color: rgb(255, 133, 133);
+  border: 2px solid rgb(175, 1, 1);
+  max-width: 800px;
+  padding: 1rem 3rem;
+  margin: 0 auto 1rem auto;
+}
+
+#error-panel #error-type {
+  margin-top: 0;
+}
